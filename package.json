@@ -6,7 +6,8 @@
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"tsx index.ts\" \"./venv/bin/python main.py\""
+    "start": "concurrently \"tsx index.ts\" \"./venv/bin/python main.py\"",
+    "nestpy": "npx tsx framework-core/cli/index.ts create myNestPyProject"
   },
   "bin": {
     "nestpy": "./framework-core/cli/index.ts"
