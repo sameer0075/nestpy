@@ -15,7 +15,7 @@ export class ${resourceName}Controller {
   handleRequest() {
     return this.${resourceName.toLowerCase()}Service.process();
   }
-}`;
+}`; 
     const service = `// ${resourceName}.service.ts
 export class ${resourceName}Service {
   process() {
