@@ -537,7 +537,8 @@ if __name__ == "__main__":
     "express": "^4.18.2",
     "ts-node": "^10.9.1",
     "concurrently": "^7.4.0",
-    "http-proxy-middleware": "^2.0.0"
+    "http-proxy-middleware": "^2.0.0",
+    "tsx": "^4.7.0"
   }
 }`;
 
@@ -578,6 +579,11 @@ if __name__ == "__main__":
     console.log(chalk.blue("🔧 Upgrading Flask and Werkzeug..."));
     execSync(`./venv/bin/pip install --upgrade Flask Werkzeug`, {
       cwd: projectPath,
+      stdio: "inherit",
+    });
+
+    execSync("pip install -e ../framework-core", {
+      cwd: path.join(projectPath),
       stdio: "inherit",
     });
   } catch (err) {
